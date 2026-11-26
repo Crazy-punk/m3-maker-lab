@@ -1,5 +1,6 @@
 function pageTrail(hash){const p=(hash||'#home').replace(/^#/,'').split('/');const trail=[{name:'探索首页',href:'#home'}];
  if(p[0]==='paths')trail.push({name:'学习路径',href:'#paths'});
+ else if(p[0]==='studio'){trail.push({name:'实验室',href:'#studio'});if(p[1]==='nameplate')trail.push({name:'姓名牌工作台',href:'#studio/nameplate'});if(['rhythm','outline','vertical','honey','peach','blue','capsule','ticket'].includes(p[2]))trail.push({name:'编辑姓名牌',href:hash})}
  else if(p[0]==='about')trail.push({name:'关于',href:'#about'});
  else if(p[0]==='progress')trail.push({name:'我的足迹',href:'#progress'});
  else if(p[0]==='lab'){
